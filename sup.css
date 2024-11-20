@@ -1,0 +1,112 @@
+/* General styling for the welcome section */
+.welcome {
+    background-color: white; /* White background */
+    padding: 0; /* Padding for the section */
+}
+
+/* Styles for the supplier section */
+.sup {
+    background-color: white; /* White background */
+    padding: 20px 0; /* Padding for the supplier section */
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px; /* Adjust the maximum width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Heading styles */
+h2 {
+    color: #005A9C; /* Change this to your desired color */
+    font-family: 'Arial', sans-serif; /* Change this to your desired font family */
+    font-size: 50px;
+    font-weight: 700;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+/* Row styles */
+.row {
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center align items */
+}
+
+/* Image row styles */
+.image-row {
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Space between image rows */
+}
+
+/* Pair styles */
+.supplier-pair {
+    display: flex; /* Flexbox for pair alignment */
+    justify-content: center; /* Center pairs */
+    margin: 0 20px; /* Space between pairs */
+}
+
+/* Column styles for the supplier images */
+.supplier {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 0 10px; /* Space around each supplier */
+}
+
+/* Supplier image styles */
+.supplier img {
+    width: 100px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and caption */
+}
+
+/* Supplier heading styles */
+.supplier h4 {
+    text-align: center; /* Center align the text */
+    font-size: 1rem; /* Font size for headings */
+    margin: 0; /* Remove margin */
+    color: #267949; /* Green color for headings */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 36px; /* Reduce font size for mobile */
+    }
+    
+    .row {
+        flex-direction: column; /* Stack the rows vertically */
+        align-items: center; /* Center align rows */
+    }
+
+    .supplier-pair {
+        flex-direction: column; /* Stack pairs vertically on smaller screens */
+        margin-bottom: 20px; /* Space between each pair */
+    }
+    
+    .supplier {
+        margin: 0 0 20px 0; /* Space below each supplier */
+    }
+
+    .supplier img {
+        width: 80px; /* Reduce image size on small screens */
+    }
+
+    .supplier h4 {
+        font-size: 0.9rem; /* Smaller font size for headings */
+    }
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+    .supplier-pair {
+        flex-direction: row; /* Keep pairs horizontal */
+    }
+
+    .supplier {
+        margin: 0 20px; /* Add space between suppliers */
+    }
+}
