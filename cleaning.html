@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Aarha Products</title>
+    <link rel="stylesheet" href="styesss.css">
+</head>
+<body>
+  <!-- Body Inner -->
+<div class="body-inner">
+    <!-- Topbar -->
+    <div id="topbar">
+        <div class="container">
+            <div class="row text-light">
+                <div class="col-md-12 d-flex justify-content-center align-items-center">
+                    <ul class="top-menu d-flex">
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/images%20(1).jfif" width="25" height="25">
+                            <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Address: Karamsad Road, V. V. Nagar.</a></li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/phone-call-icon-design-in-blue-circle-png.webp" width="25" height="25">
+                            <a href="tel:+919033642396">Phone: +91 9033642396</a>
+                        </li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/big-blue-star---business-development-sponsorship-design-and--21.png" width="25" height="25">
+                            <a href="mailto:info@aarhaproducts.com">Mail: info@aarhaproducts.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: Topbar -->
+</div>
+    <header>
+        <div class="logo">
+            <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS%20(4).svg" width="264" height="150" alt="website logo">
+        </div>
+        <div class="header-content">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="products-menu">
+                    <a href="#" onclick="toggleDropdown(event)">Products</a>
+                    <div class="dropdown">
+                        <a href="cleaning.html">Cleaning Agents</a>
+                        <a href="kitchen.html">Kitchen Supplies</a>
+                        <a href="products.html">Home Care</a>
+                        <a href="medi.html">Medical Cleaning</a>
+                    </div>
+                </li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('open'); // Toggles main dropdown visibility
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const productsMenu = event.target.closest('.products-menu');
+            productsMenu.classList.toggle('open'); // Toggles nested dropdown visibility
+        }
+    </script>
+    <main>
+        <section class="products">
+            <h2>Cleaning Agents</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/maxresdefault%20(1).jpg" alt="Soaps">
+                    <h3>Soaps</h3>
+                    <p>A common detergent made from fats or fatty acids and an alkali like sodium hydroxide. Soaps contain surfactants, which reduce the surface tension of water. </p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/Downloads/Untitled%20design%20(4).jpg" alt="Detergents">
+                    <h3>Detergents</h3>
+                    <p>Break up dirt and soil, making it easier to wash away. Synthetic detergents can work in any water condition.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/21675-zep-products.jfif" alt="Degreasers">
+                    <h3>Degreasers</h3>
+                    <p>Also known as solvent cleaners, degreasers remove grease from surfaces like counters, oven tops, and grill backsplashes.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/iStock-1153462980.webp" alt="Abrasives">
+                    <h3>Abrasives</h3>
+                    <p>Used to clean dirt from hard surfaces like pots, pans, and floors. Abrasives are effective for removing stubborn stains and spots. However, they can scratch some materials, like mirrors.</p>
+                </div>
+                <!-- <div class="product-item">
+                    <img src="" alt="">
+                    <h3>Acids</h3>
+                    <p>Can dissolve minerals and other substances. Some examples include hydrochloric acid, sulfuric acid, and phosphoric acid. Strong acids like oxalic acid, hydrochloric acid, and sulfuric acid are very poisonous and can be used as toilet bowl cleaners and rust removers. </p>
+                </div> -->
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/woman-yellow-gloves-cleaning-oven_259150-59452.avif" alt="Oven cleaners">
+                    <h3>Oven cleaners</h3>
+                    <p>Traditional oven cleaners contain sodium hydroxide (lye), solvents, and other ingredients,[3] They work best when used in a slightly warm (not hot) oven. If used in a self-cleaning oven, the lye can cause permanent damage to the oven.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Untitled%20desi.jpg" alt="All-Purpose cleaners"> 
+                    <h3>All-Purpose cleaners</h3>
+                    <p>All-purpose cleansers contain mixtures of anionic and nonionic surfactants, polymeric phosphates or other sequestering agents, solvents, hydrotropic substances, polymeric compounds, corrosion inhibitors, skin-protective agents, and sometimes perfumes and colorants.[4] Aversive agents, such as denatonium, are occasionally added to cleaning products to discourage animals and small children from consuming them.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Untitle.jpg" alt="Bleach">
+                    <h3>Bleach</h3>
+                    <p>Bleach is a powerful cleaning agent commonly used for disinfecting and whitening purposes. It primarily contains sodium hypochlorite or hydrogen peroxide as its active ingredient.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner%20(3).jpg" alt="Equipment Cleaner">
+                    <h3>Equipment Cleaner</h3>
+                    <p>Equipment cleaners are specialized cleaning products designed to effectively clean and maintain kitchen and industrial equipment, such as appliances, utensils, cookware, and machinery. These cleaners help ensure optimal performance, hygiene, and longevity of equipment by removing dirt, grease, food residues, and other contaminants.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/surface-and-kitchen-cleaners.jpg" alt="Surface Cleaner">
+                    <h3>Surface Cleaner</h3>
+                    <p>Surface cleaners are versatile cleaning products designed to effectively clean a variety of surfaces in homes, kitchens, and workplaces. These cleaners are formulated to remove dirt, grease, grime, and bacteria, ensuring a hygienic and spotless environment.</p>
+                </div>
+        </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <link rel="stylesheet" href="foot.css">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div id="logo">
+                            <a href="ha.html">
+                                <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS.png" alt="Logo" style="max-width: 50%; height: auto;"> <!-- Responsive logo -->
+                            </a>
+                        </div>
+                        <p style="text-align: justify; color: white;">
+                            We are Gujarat's No.1 wholesale supplier of high-quality cleaning products to businesses of all sizes.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We offer a wide variety of products, including Housekeeping products.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Our range includes Disposable products for various needs.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We also provide Office Stationery products to keep your workspace organized.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Additionally, we supply Safety products to ensure a secure environment.
+                        </p>
+                    </div>
+    
+                    <!-- Placeholder for other footer content -->
+                    <div class="col-lg-4">
+                        <!-- Other content can be placed here -->
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="widget footer-contact">
+                            <div class="widget-title">Contact Details:</div>
+                            <ul class="list-icon">
+                                <li>
+                                    <i class="icon-map-pin"></i>
+                                    <strong>Address:</strong>
+                                    <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Karamsad Road, V. V. Nagar, Anand, Gujarat.</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-phone"></i>
+                                    <strong>Phone:</strong>
+                                    <a href="tel:+91 9033642396">+91 9033642396</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-mail"></i>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:info@aarhaproducts.com">info@aarhaproducts.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+           
+        </div>
+    
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">
+                    <p class="mb-0 text-light">Copyright © 
+                        <script type="text/javascript">
+                            document.write(new Date().getFullYear());
+                        </script> All Rights Reserved By Arha Products | 
+                        <a href="airbalinfotech@gmail.com" target="_blank" style="background: none;">Design By: Airbal Infotech</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
