@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Aarha Products</title>
+    <link rel="stylesheet" href="styesss.css">
+</head>
+<body>
+   <!-- Body Inner -->
+<div class="body-inner">
+    <!-- Topbar -->
+    <div id="topbar">
+        <div class="container">
+            <div class="row text-light">
+                <div class="col-md-12 d-flex justify-content-center align-items-center">
+                    <ul class="top-menu d-flex">
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/images%20(1).jfif" width="25" height="25">
+                            <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Address: Karamsad Road, V. V. Nagar.</a></li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/phone-call-icon-design-in-blue-circle-png.webp" width="25" height="25">
+                            <a href="tel:+919033642396">Phone: +91 9033642396</a>
+                        </li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/big-blue-star---business-development-sponsorship-design-and--21.png" width="25" height="25">
+                            <a href="mailto:info@aarhaproducts.com">Mail: info@aarhaproducts.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: Topbar -->
+</div>
+
+    <header>
+        <div class="logo">
+            <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS%20(4).svg" width="264" height="150" alt="website logo">
+        </div>
+        <div class="header-content">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="products-menu">
+                    <a href="#" onclick="toggleDropdown(event)">Products</a>
+                    <div class="dropdown">
+                        <a href="cleaning.html">Cleaning Agents</a>
+                        <a href="kitchen.html">Kitchen Supplies</a>
+                        <a href="products.html">Home Care</a>
+                        <a href="medi.html">Medical Cleaning</a>
+                    </div>
+                </li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('open'); // Toggles main dropdown visibility
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const productsMenu = event.target.closest('.products-menu');
+            productsMenu.classList.toggle('open'); // Toggles nested dropdown visibility
+        }
+    </script>
+    <main>
+        <section class="products">
+            <h2>Home Care</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Untitled%20design%20(6).jpg" alt="Dustbin">
+                    <h3>Dustbin</h3>
+                    <p>Our sturdy dustbin is perfect for both indoor and outdoor use, helping you maintain cleanliness effortlessly.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Untitled%20design%20(5).jpg" alt="Microfiber Dust Gloves">
+                    <h3>Microfiber Dust Gloves</h3>
+                    <p>These gloves effectively trap dust and dirt, making cleaning quick and efficient. Perfect for delicate surfaces.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Address%20Karamsad%20Road,%20V.%20V.%20Nagar.%20(2).jpg" alt="Phenyl Concentrate">
+                    <h3>Phenyl Concentrate</h3>
+                    <p>A powerful disinfectant, our phenyl concentrate eliminates germs and bacteria while leaving a fresh scent.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner%20(1).jpg" alt="Hand Wash">
+                    <h3>Hand Wash</h3>
+                    <p>Our hand wash is formulated with moisturizing ingredients to keep your hands clean and soft after every use.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner.jpg" alt="Glass Cleaner">
+                    <h3>Glass Cleaner</h3>
+                    <p>Achieve streak-free shine on all glass surfaces with our efficient glass cleaner, safe for everyday use.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Address%20Karamsad%20Road,%20V.%20V.%20Nagar.%20(20).jpg" alt="Toilet Cleaner">
+                    <h3>Toilet Cleaner</h3>
+                    <p>Our toilet cleaner fights tough stains and odors, ensuring your toilet bowl stays sparkling clean and fresh.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner%20(2).jpg" alt="Multi Cleaner">
+                    <h3>Multi Cleaner</h3>
+                    <p>This versatile cleaner works wonders on various surfaces, providing effective cleaning without harsh chemicals.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Address%20Karamsad%20Road,%20V.%20V.%20Nagar.%20(18).jpg" alt="Air Cleaner">
+                    <h3>Air Cleaner</h3>
+                    <p>Keep your indoor air fresh and clean with our air cleaner, designed to eliminate odors and impurities.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner%20(3).jpg" alt="Equipment Cleaner">
+                    <h3>Equipment Cleaner</h3>
+                    <p>Safely clean and maintain your equipment with our specialized cleaner, ensuring longevity and performance.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Address%20Karamsad%20Road,%20V.%20V.%20Nagar.%20(17).jpg" alt="Floor Cleaner">
+                    <h3>Floor Cleaner</h3>
+                    <p>Our surface cleaner removes dirt and grime effectively, leaving surfaces shiny and sanitized after each use.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner%20(4).jpg" alt="Multi Polish">
+                    <h3>Multi Polish</h3>
+                    <p>This polish not only cleans but also protects surfaces, giving them a long-lasting shine and luster.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/eqauNDf8Gm4JAhikipzlSVpKIY1J0w4Qmm3c4LVp.webp" alt="Cleaning Trolley">
+                    <h3>Cleaning Trolley</h3>
+                    <p>Effortlessly transport all your cleaning supplies with our sturdy cleaning trolley, designed for convenience.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner%20(5).jpg" alt="Liquid Detergent">
+                    <h3>Liquid Detergent</h3>
+                    <p>Liquid detergent is a cleaning product that is commonly used for laundry purposes.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner%20(6).jpg" alt="Antiseptic Liquid">
+                    <h3>Antiseptic Liquid</h3>
+                    <p>Antiseptic liquid, also known as antiseptic solution or antiseptic disinfectant, is a liquid formulation that is used to kill or inhibit the growth of microorganisms on the skin or on surfaces.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner%20(7).jpg" alt="Dish Wash">
+                    <h3>Dish Wash</h3>
+                    <p>Dish wash liquid, also known as dish soap or dish detergent, is a cleaning product specifically formulated for washing dishes, utensils, and cookware. It is used to remove grease, food residues, and stains from dishes, ensuring they are clean and ready for reuse.</p>
+                </div>           
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <link rel="stylesheet" href="foot.css">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div id="logo">
+                            <a href="ha.html">
+                                <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS.png" alt="Logo" style="max-width: 50%; height: auto;"> <!-- Responsive logo -->
+                            </a>
+                        </div>
+                        <p style="text-align: justify; color: white;">
+                            We are Gujarat's No.1 wholesale supplier of high-quality cleaning products to businesses of all sizes.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We offer a wide variety of products, including Housekeeping products.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Our range includes Disposable products for various needs.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We also provide Office Stationery products to keep your workspace organized.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Additionally, we supply Safety products to ensure a secure environment.
+                        </p>
+                    </div>
+    
+                    <!-- Placeholder for other footer content -->
+                    <div class="col-lg-4">
+                        <!-- Other content can be placed here -->
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="widget footer-contact">
+                            <div class="widget-title">Contact Details:</div>
+                            <ul class="list-icon">
+                                <li>
+                                    <i class="icon-map-pin"></i>
+                                    <strong>Address:</strong>
+                                    <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Karamsad Road, V. V. Nagar, Anand, Gujarat.</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-phone"></i>
+                                    <strong>Phone:</strong>
+                                    <a href="tel:+91 9033642396">+91 9033642396</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-mail"></i>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:info@aarhaproducts.com">info@aarhaproducts.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+           
+        </div>
+    
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">
+                    <p class="mb-0 text-light">Copyright © 
+                        <script type="text/javascript">
+                            document.write(new Date().getFullYear());
+                        </script> All Rights Reserved By Arha Products | 
+                        <a href="airbalinfotech@gmail.com" target="_blank" style="background: none;">Design By: Airbal Infotech</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
