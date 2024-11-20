@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Images with Headings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+         body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* General Body Inner Style */
+        .body-inner {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light background */
+            padding: 20px;
+        }
+
+        /* Topbar Styles */
+        #topbar {
+            background-color: #005A9C; /* Dark background */
+            padding: 2px 0; /* Narrow padding */
+            padding-top: 2px;
+            height: 75px;
+        }
+
+        /* Flexbox for Top Menu */
+        .row.text-light {
+            display: flex;
+            justify-content: space-between; /* Distribute space evenly */
+            align-items: center; /* Center items vertically */
+        }
+
+        /* Top Menu Item Styles */
+        .top-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Horizontal items */
+            align-items: center; /* Center items vertically */
+        }
+
+        .top-menu li {
+            margin-right: 15px; /* Space between items */
+            display: flex; /* Flex for icon and text */
+            align-items: center; /* Center icon and text */
+        }
+
+        .top-menu a {
+            color: #ffffff; /* White text */
+            text-decoration: none; /* Remove underline */
+            font-size: 13px; /* Compact font size */
+        }
+
+        .top-menu a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        /* Icon Styles */
+        .icon-map-pin,
+        .icon-phone,
+        .icon-mail {
+            margin-right: 5px; /* Space between icon and text */
+            color: #ffffff; /* White color for icons */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            #topbar {
+                display: none; /* Hide topbar on smaller screens */
+            }
+        }
+
+        .logo {
+            text-align: center;
+            margin: 10px 0;
+        }
+        /* header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+        /* header {
+            font-family: Abril Fatface;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 0px;
+        } */
+/* 
+        .call-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .call-icon a {
+            color: #000;
+            text-decoration: underline;
+            margin-left: 15px;
+        } */
+
+/* Header styling */
+/* header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+/* Add a new class for the nav container */
+.header-content {
+    display: flex;
+    flex: 1; /* Allow it to grow and take available space */
+    justify-content: center; /* Center nav items */
+}
+
+.logo {
+    margin-right: auto; /* Pushes the nav to the center by using auto margin */
+    margin-left: 80px;
+}
+
+/* Main nav list styling */
+.nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show main nav when open */
+.nav-list.open {
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+}
+
+.nav-list li {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+/* Base styling for navbar links */
+.nav-list li a {
+    color: #000; /* Default color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Media query for desktop view */
+@media (min-width: 769px) {
+    .nav-list {
+        display: flex; /* Change display to flex for desktop */
+    }
+
+    .nav-list li a {
+        font-size: 24px; /* Increase font size for desktop */
+        font-family:Arial, sans-serif; /* Change to sans-serif */
+        text-transform: uppercase; /* Make text uppercase */
+    }
+}
+
+/* Styling for nested dropdown */
+.dropdown {
+    display: none;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding-left: 20px;
+}
+
+/* Show dropdown when open */
+.nav-list li.open .dropdown {
+    display: flex;
+}
+
+.dropdown a {
+    padding: 10px 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #000;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list.open {
+        display: block;
+    }
+}
+/* Ensure the header is a flex container and centers its content */
+.header {
+    display: flex; /* Use flexbox for header layout */
+    justify-content: center; /* Center the nav-list in the header */
+    align-items: center; /* Center items vertically in header */
+    width: 100%; /* Full width for the header */
+    padding: 10px; /* Add padding to the header */
+    background-color: white; /* Optional: background color for visibility */
+}
+
+/* Show the navigation bar as a centered horizontal bar in desktop view */
+@media (min-width: 769px) {
+        .nav-list {
+            display: flex; /* Display nav items in a row */
+            flex-direction: row; /* Horizontal layout for desktop */
+            position: static; /* Position normally in header */
+            opacity: 1; /* Make fully visible */
+            max-height: none; /* No height limit on desktop */
+            background-color: transparent; /* No background color for inline nav */
+            box-shadow: none; /* Remove shadow on desktop */
+            justify-content: center; /* Center the nav items in header */
+            align-items: center; /* Center items vertically */
+            gap: 20px; /* Space between nav items */
+            width: auto; /* Set to auto to not stretch unnecessarily */
+    }
+
+    /* Styling for nav list items */
+        .nav-list li {
+            list-style: none; /* Remove bullets */
+            margin: 0; /* Remove additional space */
+    }
+
+        .nav-list li a {
+            color: #000; /* Black text for desktop */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Standard font size */
+    }
+
+    /* Hide the hamburger icon on desktop */
+        .hamburger {
+            display: none;
+    }
+}
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: center; /* Center the content */
+            max-width: 1200px; /* Maximum width of the container */
+            margin: 0 auto; /* Center the container */
+        }
+
+        .item {
+            margin: 15px;
+            text-align: center;
+            flex: 1 1 30%; /* For desktop, 3 items in a row */
+        }
+
+        img {
+            max-width: 100%; /* Responsive images */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .image-container {
+            position: relative;
+            width:80%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .image-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: slide 12s infinite;
+        }
+
+        .image-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(-100%); opacity: 0; }
+            10% { opacity: 1; }
+            30% { transform: translateX(0); opacity: 1; }
+            40% { opacity: 1; }
+            60% { opacity: 0; }
+            70% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(100%); opacity: 0; }
+        }
+
+        .image-slide:nth-child(1) { animation-delay: 0s; }
+        .image-slide:nth-child(2) { animation-delay: 4s; }
+        .image-slide:nth-child(3) { animation-delay: 8s; }
+       
+
+
+
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .countdown-background {
+            background-color: #005A9C; /* Background color for countdown section */
+            padding: 20px; /* Padding around the content */
+            border-radius: 8px; /* Rounded corners */
+            margin: 20px 0; /* Space around the container */
+            color: white; /* Text color for contrast */
+            text-align: center; /* Center text */
+        }
+
+        .countdown-container {
+            display: flex; /* Use flexbox for horizontal layout */
+            justify-content: center; /* Center countdowns */
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        }
+
+        .countdown-section {
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center align section content */
+            margin: 30px; /* Increased space around each section */
+            width: 120px; /* Fixed width for uniformity */
+        }
+
+        .countdown {
+            font-size: 2em; /* Large font size */
+            width: 100%; /* Full width to ensure centering */
+        }
+
+        .section-header {
+            margin-top: 10px; /* Space above header */
+            font-size: 1.2em; /* Font size for headers */
+            color: white; /* Header color to match background */
+        }
+
+        /* Image style */
+        .section-image {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Space below the image */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .countdown-container {
+                flex-direction: column; /* Stack items vertically on small screens */
+                align-items: center; /* Center items */
+            }
+        }
+        /* General styles for the section */
+
+        #section4 {
+            background: linear-gradient(135deg, white, white); /* Soft gradient background */
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* Center the heading */
+        .home_contact {
+            text-align: center; /* Center align all text within this class */
+        }
+
+        .home_contact h2 {
+            font-size: 3rem; /* Larger font size for impact */
+            color: #005A9C; /* Heading color */
+            margin-bottom: 90px; /* Space below heading */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+        }
+
+        /* Styles for the form container */
+        .container {
+            display: flex;
+            justify-content: center; /* Center the form horizontally */
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally */
+            padding: 50px;
+        }
+
+        /* Styles for the form */
+        .widget-contact-form {
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 10px; /* More pronounced rounded corners */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
+            padding: 40px; /* Adjusted padding for better fit */
+            width: 100%; /* Full width on small screens */
+            max-width: 500px; /* Increased max width for larger screens */
+        }
+
+        /* Form group styles */
+        .form-group {
+            margin-bottom: 20px; /* Increased spacing between form groups */
+        }
+
+        /* Label styles */
+        label {
+            font-weight: bold; /* Bold labels */
+            color: black; /* Matching label color */
+            margin-bottom: 5px; /* Spacing below labels */
+            display: block; /* Ensures labels take full width */
+        }
+
+        /* Input fields */
+        .form-control {
+            border: 2px solid gainsboro; /* Bold border color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px; /* Ample padding */
+            width: 100%; /* Full width */
+            box-sizing: border-box; /* Include padding in width calculation */
+            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+        }
+
+        /* Focus state for input fields */
+        .form-control:focus {
+            border-color: gainsboro; /* Vibrant color on focus */
+            box-shadow: 0 0 10px rgba(255, 69, 0, 0.5); /* Glow effect */
+            outline: none; /* Remove default outline */
+        }
+
+        /* Button styles */
+        .btn {
+            background-color: green; /* Button color */
+            color: #ffffff; /* White text color */
+            border: none; /* No border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px 30px; /* Ample padding */
+            font-size: 1.1rem; /* Slightly larger font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s, transform 0.3s; /* Transition for button effects */
+        }
+
+        /* Button hover state */
+        .btn:hover {
+            background-color: darkgreen; /* Darker shade on hover */
+            transform: translateY(-3px); /* Lift effect on hover */
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+        .widget-contact-form {
+            padding: 25px; /* Adjust padding for smaller screens */
+            width: 90%; /* Responsive width */
+        }
+    
+        .form-group {
+            margin-bottom: 20px; /* Maintain spacing for smaller screens */
+        }
+    
+        .home_contact h2 {
+            font-size: 2rem; /* Responsive heading size */
+        }
+     }
+
+
+   </style>
+</head>
+<body>
+    <!-- Body Inner -->
+    <div class="body-inner">
+        <!-- Topbar -->
+        <div id="topbar" class="d-none d-xl-block d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row text-light">
+                            <div class="col-md-8">
+                                <ul class="top-menu">
+                                    <li><i class="fas fa-map-marker-alt icon-map-pin"></i> <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Address: Karamsad Road, V. V. Nagar.</a></li>
+                                </ul>
+                            </div>
+                          <div class="col-md-4 te  xt-right">
+                                <ul class="top-menu">
+                                    <li><img src="file:///C:/Users/Admin/.vscode/clean.html/phone-call-icon-design-in-blue-circle-png.webp" width="25" height="25"> <a href="tel:+919033642396">Phone: +91 9033642396</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2">
+                                <ul class="top-menu">
+                                    <li><i class="fas fa-envelope icon-mail"></i><a href="mailto:info@aarhaproducts.com">Mail: info@aarhaproducts.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: Topbar -->
+ 
+        <header>
+            <div class="logo">
+                <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS%20(4).svg" width="264" height="150" alt="website logo">
+            </div>
+            <div class="header-content">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="products-menu">
+                        <a href="#" onclick="toggleDropdown(event)">Products</a>
+                        <div class="dropdown">
+                            <a href="cleaning.html">Cleaning Agents</a>
+                            <a href="kitchen.html">Kitchen Supplies</a>
+                            <a href="products.html">Home Care</a>
+                            <a href="medi.html">Medical Cleaning</a>
+                        </div>
+                    </li>
+                    <li><a href="inquiry.html">Inquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            </div>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+    
+        <script>
+            function toggleMenu() {
+                const navList = document.querySelector('.nav-list');
+                navList.classList.toggle('open'); // Toggles main dropdown visibility
+            }
+    
+            function toggleDropdown(event) {
+                event.preventDefault();
+                const productsMenu = event.target.closest('.products-menu');
+                productsMenu.classList.toggle('open'); // Toggles nested dropdown visibility
+            }
+        </script>
+            <!-- <div class="call-icon">
+                <img src="file:///C:/Users/Admin/.vscode/clean.html/mobileCall.svg" width="60" height="70" alt="call-icon">
+                <a>+919033642396</a>
+            </div>  -->
+        </header> 
+        <!-- <header>
+            <div class="logo">Arha Products</div>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a>
+                    <div class="dropdown">
+                        <a href="cleaning.html">Cleaning Agents</a>
+                        <a href="kitchen.html">Kitchen Supplies</a>
+                        <a href="products.html">Home Care</a>
+                        <a href="medi.html">Medical Cleaning</a>
+                    </div>
+                </li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </header>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li>
+                    <a href="#categories">Product Categories</a>
+                    <ul>
+                        <li><a href="cleaning.html">Cleaning Agents</a></li>
+                        <li><a href="kitchen.html">Kitchen Supplies</a></li>
+                        <li><a href="products.html">Home Care</a></li>
+                        <li><a href="medi.html">Medical Cleaning</a></li>
+                    </ul>
+                </li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    
+         -->
+        <!-- <br> -->
+        <center>
+            <div class="image-container">
+                <div class="image-slide"><img src="file:///C:/Users/Admin/.vscode/clean.html/Untitled%20design%20(4).jpg" alt="image-1"></div>
+                <div class="image-slide"><img src="file:///C:/Users/Admin/Downloads/Untitled%20design%20(1).jpg" alt="image-2"></div>
+                <div class="image-slide"><img src="file:///C:/Users/Admin/Downloads/Untitled%20design.jpg" alt="image-3"></div>
+            </div>
+        </center>
+        <!-- <main>
+            <center>
+                <h2>Welcome to Arha Products</h2>
+                <p>Your one-stop shop for all cleaning materials! We offer a wide range of high-quality cleaning products to keep your home and workspace sparkling clean.</p>
+                <br>
+            </center>
+            <div class="container">
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/iStock-1153462980.webp" alt="Abrasives">        
+                    <h3>Abrasives</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/images.jfif" alt="Microfiber Dust Gloves">
+                    <h3>MICROFIBER DUST GLOVES</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/61S6lCR8WoL._AC_UF1000,1000_QL80_.jpg" alt="Cleaning Brushes">
+                    <h3>Cleaning Brushes</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/hq720.jpg" alt="Hand Wash">
+                    <h3>HAND WASH</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/sprayway-glass-cleaners-sw056r-fa_600.avif" alt="Glass Cleaner">
+                    <h3>GLASS CLEANER</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/senu_toiletcleaner.jpg" alt="Toilet Cleaner">
+                    <h3>TOILET CLEANER</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/MultipurposeCleaner-img.png" alt="Multi Cleaner">
+                    <h3>MULTI CLEANER</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/istockphoto-1164644362-612x612.jpg" alt="Air Cleaner">
+                    <h3>AIR CLEANER</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/8.jpg" alt="Equipment Cleaner">
+                    <h3>EQUIPMENT CLEANER</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/different-types-floor-polish.jpg" alt="Surface Cleaner">
+                    <h3>SURFACE CLEANER</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/51mdtbIwHfL.jpg" alt="Multi Polish">
+                    <h3>MULTI POLISH</h3>
+                </div>
+                <div class="item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/eqauNDf8Gm4JAhikipzlSVpKIY1J0w4Qmm3c4LVp.webp" alt="Cleaning Trolley">
+                    <h3>CLEANING TROLLEY</h3>
+                </div>
+            </div>
+        </main> -->
+
+
+
+        <!-- WELCOME -->
+<section class="welcome">
+    <link rel="stylesheet" href="suppliers.css">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="text-medium m-t-0">Welcome to <br>Arha Products.</h2>
+                <div class="seperator m-0"></div>
+                <p class="lead text-dark mb-0" style="text-align: justify;"> The company has emerged as a Manufacturer, Importer, wholesale trader and Corporate supplies more than 4000+ products likewise, <strong style="color:#267949;font-weight:700">Steel and Plastic Dustbin, Cleaning Tool, Soap Dispenser, All Tissue Paper and Dispenser, all types of cleaning Cloth, all brand Cleaning chemicals, Solar cleaning material, tools garbage bag and many more. </strong></p>
+            </div>
+            <div class="col-lg-6">
+                <img src="file:///C:/Users/Admin/.vscode/clean.html/Untitled%20desig.jpg" class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-12">
+          
+
+            <p class="lead text-dark" style="text-align: justify;"> Our products are acknowledged among wide clients for their high impact strength, dimensional accuracy, immaculate quality, precise engineering, high functionality, hassle free operations and many more, as we manufacture them using branded components and quality raw material. Furthermore, we lay strong emphasis on research and development, in order to remain updated with the growing market preferences and bring in inventive products from time and again. Over the years, we have been continuing our endeavors to gain a level of appreciation from our valuable clients. By satisfying our clients immensely, we have been successful in becoming a leading market player in the industry. Besides, our determination towards providing a desired range to the clients has helped us climb the ladder of success as well as achievements.</p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<!-- end: WELCOME -->
+
+
+<section class="sup">
+    <link rel="stylesheet" href="sup.css">
+    <div class="container">
+        <center>
+            <h2 class="bold-text m-t-0 text-center">General Order Supplier</h2>
+        </center>
+        <div class="seperator mt-1"></div>
+
+        <div class="row">
+            <!-- First Row of Image Pairs -->
+            <div class="image-row">
+                <div class="supplier-pair">
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/office.png" alt="office">
+                        <h4>Office</h4>
+                    </div>
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/industrials.png" alt="industrials">
+                        <h4>Industrials</h4>
+                    </div>
+                </div>
+                <div class="supplier-pair">
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/colleges.png" alt="colleges">
+                        <h4>Colleges</h4>
+                    </div>
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/hospitals.png" alt="hospitals">
+                        <h4>Hospitals</h4>
+                    </div>
+                </div>
+                <div class="supplier-pair">
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/schools.png" alt="schools">
+                        <h4>Schools</h4>
+                    </div>
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/malls.png" alt="malls">
+                        <h4>Malls</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row of Image Pairs -->
+            <div class="image-row">
+                <div class="supplier-pair">
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/hostels.png" alt="hostels">
+                        <h4>Hostels</h4>
+                    </div>
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/banks.png" alt="banks">
+                        <h4>Banks</h4>
+                    </div>
+                </div>
+                <div class="supplier-pair">
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/airport.png" alt="airport">
+                        <h4>Airport</h4>
+                    </div>
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/railway.png" alt="railway">
+                        <h4>Railway</h4>
+                    </div>
+                </div>
+                <div class="supplier-pair">
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/cinema.png" alt="cinema">
+                        <h4>Cinema</h4>
+                    </div>
+                    <div class="supplier">
+                        <img src="file:///C:/Users/Admin/.vscode/clean.html/home.png" alt="home">
+                        <h4>Home</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+                <div class="countdown-background">
+                    <div class="countdown-container">
+                        <!-- <div class="countdown-section">
+                            <img src="file:///C:/Users/Admin/.vscode/clean.html/products.png" alt="Products" class="section-image">
+                            <div class="countdown" data-target="250">0 +</div>
+                            <div class="section-header">Products</div>
+                        </div> -->
+                        <div class="countdown-section">
+                            <img src="file:///C:/Users/Admin/.vscode/clean.html/happy_customers.png" alt="Happy Customers" class="section-image">
+                            <div class="countdown" data-target="700">0 +</div>
+                            <div class="section-header">Happy Customers</div>
+                        </div>
+                        <div class="countdown-section">
+                            <img src="file:///C:/Users/Admin/.vscode/clean.html/clients.png" alt="Clients" class="section-image">
+                            <div class="countdown" data-target="400">0 +</div>
+                            <div class="section-header">Clients</div>
+                        </div>
+                        <div class="countdown-section">
+                            <img src="file:///C:/Users/Admin/.vscode/clean.html/area.png" alt="Area Served" class="section-image">
+                            <div class="countdown" data-target="100">0 +</div>
+                            <div class="section-header">Area Served</div>
+                        </div>
+                    </div>
+                </div>           
+        
+                
+        <script>
+            const duration = 4000; // Duration in milliseconds (4 seconds)
+    
+            // Function to start the countdown
+            function startCountdown(element) {
+                const targetNumber = parseInt(element.getAttribute('data-target'), 10);
+                const steps = targetNumber;
+                const intervalTime = duration / steps;
+                let currentNumber = 0;
+    
+                // Update the countdown display
+                function updateCountdown() {
+                    if (currentNumber <= targetNumber) {
+                        element.textContent = currentNumber + ' +'; // Add the plus sign here
+                        currentNumber++;
+                    } else {
+                        clearInterval(countdownInterval); // Stop the interval when done
+                    }
+                }
+    
+                // Start the countdown
+                const countdownInterval = setInterval(updateCountdown, intervalTime);
+            }
+    
+            // Initialize countdowns on page load
+            document.querySelectorAll('.countdown').forEach(startCountdown);
+        </script>
+        <section id="section4" class="p-t-50 p-b-50">
+            <div class="container">
+                <div class="row home_contact">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="text-medium">Contact us</h2>
+        
+                    </div>
+                </div>
+        
+        
+                <div class="row">
+                    <div class="col-lg-10 center">
+                        <form class="widget-contact-form" action="contact.html" id="dwss-contact-form" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="user_agent" value="">
+                            <input type="hidden" name="has_otp" value="0">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">First Name</label>
+                                    <input type="text" aria-required="true" name="name" class="form-control required name" placeholder="Enter your First Name">
+                                </div>
+                                &nbsp;&nbsp;&nbsp;
+                                <div class="form-group col-md-6">
+                                    <label for="name">Last Name</label>
+                                    <input type="text" aria-required="true" name="lname" class="form-control required name" placeholder="Enter your Last Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email</label>
+                                    <input type="email" aria-required="true" required name="email" class="form-control required email" placeholder="Enter your Email">
+                                </div>
+                                &nbsp;&nbsp;&nbsp;
+                                <div class="form-group col-md-6">
+                                    <label for="subject">Phone</label>
+                                    <input type="text" name="phone" required class="form-control required" placeholder="Enter your Number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="custom-label">Message</label>
+                                <textarea name="message" rows="8" cols="5" class="form-control required" placeholder="Enter your Message"></textarea>
+                            </div>
+                            <br></br>
+                            <div class="row">
+                                <div class="form-group text-center">
+                                    <button class="btn form-submit" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
+                                </div>
+                            </div>
+                        </form>
+        
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+    
+        <footer id="footer">
+            <link rel="stylesheet" href="foot.css">
+            <div class="footer-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div id="logo">
+                                <a href="ha.html">
+                                    <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS.png" alt="Logo" style="max-width: 50%; height: auto;"> 
+                                </a>
+                            </div>
+                            <p style="text-align: justify; color: white;">
+                                We are Gujarat's No.1 wholesale supplier of high-quality cleaning products to businesses of all sizes.
+                            </p>
+                            <p style="text-align: justify; color: white;">
+                                We offer a wide variety of products, including Housekeeping products.
+                            </p>
+                            <p style="text-align: justify; color: white;">
+                                Our range includes Disposable products for various needs.
+                            </p>
+                            <p style="text-align: justify; color: white;">
+                                We also provide Office Stationery products to keep your workspace organized.
+                            </p>
+                            <p style="text-align: justify; color: white;">
+                                Additionally, we supply Safety products to ensure a secure environment.
+                            </p>
+                        </div>
+        
+                        <!-- Placeholder for other footer content -->
+                        <div class="col-lg-4">
+                            <!-- Other content can be placed here -->
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <div class="widget footer-contact">
+                                <div class="widget-title">Contact Details :</div>
+                                <ul class="list-icon">
+                                    <li>
+                                        <i class="icon-map-pin"></i>
+                                        <strong>Address:</strong>
+                                        <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Karamsad Road, V. V. Nagar, Anand, Gujarat.</a>
+                                    </li>
+                                    <br></br>
+                                    <li>
+                                        <i class="icon-phone"></i>
+                                        <strong>Phone:</strong>
+                                        <a href="tel:+91 9033642396">+91 9033642396</a>
+                                    </li>
+                                    <br></br>
+                                    <li>
+                                        <i class="icon-mail"></i>
+                                        <strong>Email:</strong>
+                                        <a href="mailto:info@aarhaproducts.com">info@aarhaproducts.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+               
+            </div>
+        
+            <div class="copyright-content">
+                <div class="container">
+                    <div class="copyright-text text-center">
+                        <p class="mb-0 text-light">Copyright © 
+                            <script type="text/javascript">
+                                document.write(new Date().getFullYear());
+                            </script> All Rights Reserved By Arha Products | 
+                            <a href="airbalinfotech@gmail.com" target="_blank" style="background: none;">Design By: Airbal Infotech</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+</body>
+</html>
