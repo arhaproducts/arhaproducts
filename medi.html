@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Aarha Products</title>
+    <link rel="stylesheet" href="styesss.css">
+</head>
+<body>
+    <!-- Body Inner -->
+<div class="body-inner">
+    <!-- Topbar -->
+    <div id="topbar">
+        <div class="container">
+            <div class="row text-light">
+                <div class="col-md-12 d-flex justify-content-center align-items-center">
+                    <ul class="top-menu d-flex">
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/images%20(1).jfif" width="25" height="25">
+                            <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Address: Karamsad Road, V. V. Nagar.</a></li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/phone-call-icon-design-in-blue-circle-png.webp" width="25" height="25">
+                            <a href="tel:+919033642396">Phone: +91 9033642396</a>
+                        </li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/big-blue-star---business-development-sponsorship-design-and--21.png" width="25" height="25">
+                            <a href="mailto:info@aarhaproducts.com">Mail: info@aarhaproducts.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: Topbar -->
+</div>
+
+    <header>
+        <div class="logo">
+            <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS%20(4).svg" width="264" height="150" alt="website logo">
+        </div>
+        <div class="header-content">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="products-menu">
+                    <a href="#" onclick="toggleDropdown(event)">Products</a>
+                    <div class="dropdown">
+                        <a href="cleaning.html">Cleaning Agents</a>
+                        <a href="kitchen.html">Kitchen Supplies</a>
+                        <a href="products.html">Home Care</a>
+                        <a href="medi.html">Medical Cleaning</a>
+                    </div>
+                </li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('open'); // Toggles main dropdown visibility
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const productsMenu = event.target.closest('.products-menu');
+            productsMenu.classList.toggle('open'); // Toggles nested dropdown visibility
+        }
+    </script>
+    <main>
+        <section class="products">
+            <h2>Medical Cleaning</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/pexels-photo-4099471.webp" alt="Disinfectant">
+                    <h3>Disinfectant</h3>
+                    <p>Disinfection describes the use of a chemical or physical process to inactivate or eliminate microbial organisms on inanimate objects or surfaces. These processes destroy or irreversibly inactive most pathogens, but are generally less effective against bacterial endospores.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/hand-sanitizer-lede.webp" alt="Hand Sanitizers">
+                    <h3>Hand Sanitizers</h3>
+                    <p>Hand sanitizer (also known as hand antiseptic, hand disinfectant, hand rub, or handrub) is a liquid, gel, or foam used to kill viruses, bacteria, and other microorganisms on the hands. It can also come in the form of a cream, spray, or wipe.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/team-professional-janitors-using-equipment-600nw-1934630393.webp" alt="Medical Device Cleaner">
+                    <h3>Medical Device Cleaner</h3>
+                    <p>medical device cleaners are expressly formulated to get these products critically clean without leaving interfering residues, whether the product is for biomechanical or electronic use. Medical device cleaning by definition requires critical cleaning for use in demanding human health and veterinary applications.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Natur-Bag-and-SlimJim_updated-print-filled-bag.png" alt="Compost Bags">
+                    <h3>Compost Bags</h3>
+                    <p>They are derived generally from renewable raw materials like starch (e.g. corn, potato, tapioca etc), cellulose, soy protein, lactic acid etc., are not hazardous/toxic in production and decompose back into carbon dioxide, water, biomass etc. 100% Plastic Free & Eco-friendly.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Happy_Hands_brand_with_latex_gloves_photo-removebghd.jpg" alt="Disposable Gloves">
+                    <h3>Disposable Gloves</h3>
+                    <p>Disposable gloves are gloves that you use one time and then throw away. They can protect your health and the health of the person you're caring for. They help keep germs and infection from spreading to you and to the other person. Use gloves whenever you might touch body fluids, such as saliva, blood, urine, or stool.</p>
+                </div>
+        </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <link rel="stylesheet" href="foot.css">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div id="logo">
+                            <a href="ha.html">
+                                <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS.png" alt="Logo" style="max-width: 50%; height: auto;"> <!-- Responsive logo -->
+                            </a>
+                        </div>
+                        <p style="text-align: justify; color: white;">
+                            We are Gujarat's No.1 wholesale supplier of high-quality cleaning products to businesses of all sizes.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We offer a wide variety of products, including Housekeeping products.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Our range includes Disposable products for various needs.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We also provide Office Stationery products to keep your workspace organized.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Additionally, we supply Safety products to ensure a secure environment.
+                        </p>
+                    </div>
+    
+                    <!-- Placeholder for other footer content -->
+                    <div class="col-lg-4">
+                        <!-- Other content can be placed here -->
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="widget footer-contact">
+                            <div class="widget-title">Contact Details:</div>
+                            <ul class="list-icon">
+                                <li>
+                                    <i class="icon-map-pin"></i>
+                                    <strong>Address:</strong>
+                                    <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Karamsad Road, V. V. Nagar, Anand, Gujarat.</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-phone"></i>
+                                    <strong>Phone:</strong>
+                                    <a href="tel:+91 9033642396">+91 9033642396</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-mail"></i>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:info@aarhaproducts.com">info@aarhaproducts.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+           
+        </div>
+    
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">
+                    <p class="mb-0 text-light">Copyright © 
+                        <script type="text/javascript">
+                            document.write(new Date().getFullYear());
+                        </script> All Rights Reserved By Arha Products | 
+                        <a href="airbalinfotech@gmail.com" target="_blank" style="background: none;">Design By: Airbal Infotech</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
