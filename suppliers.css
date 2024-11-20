@@ -1,0 +1,61 @@
+/* General styling for the welcome section */
+.welcome {
+    background-color: white; /* White background */
+    padding: 0px 0; /* Padding for the section */
+}
+
+/* Styles for the supplier section */
+.sup {
+    background-color: white; /* White background */
+    padding: 0px 0; /* Padding for the supplier section */
+}
+
+/* Container styles */
+.container {
+    max-width: 2800px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Row styles */
+.row {
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
+}
+
+/* Column styles for the supplier images */
+.col-lg-2 {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 30px; /* Space below each column */
+}
+
+/* Supplier image styles */
+.supplier img {
+    width: 100px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and caption */
+}
+
+/* Supplier heading styles */
+.supplier h4 {
+    text-align: center; /* Center align the text */
+    font-size: 1rem; /* Font size for headings */
+    margin: 0; /* Remove margin */
+    color: #267949; /* Green color for headings */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .col-lg-2 {
+        flex: 1 1 45%; /* Make columns responsive on smaller screens */
+    }
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+    .col-lg-2 {
+        flex: 1 1 20%; /* Four images per row */
+    }
+}
