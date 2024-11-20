@@ -1,0 +1,424 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* General Body Inner Style */
+.body-inner {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background */
+    padding: 20px;
+}
+
+/* Topbar Styles */
+#topbar {
+    background-color: #005A9C; /* Dark background */
+    padding: 5px 0; /* Narrow padding */
+}
+
+/* Flexbox for Top Menu */
+.row.text-light {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Top Menu Item Styles */
+.top-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Horizontal items */
+    align-items: center; /* Center items vertically */
+}
+
+.top-menu li {
+    margin: 0 15px; /* Space between items */
+    display: flex; /* Flex for icon and text */
+    align-items: center; /* Center icon and text */
+}
+
+.top-menu a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 13px; /* Compact font size */
+}
+
+.top-menu a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Icon Styles */
+.icon-map-pin,
+.icon-phone,
+.icon-mail {
+    margin-right: 5px; /* Space between icon and text */
+    color: #ffffff; /* White color for icons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #topbar {
+        display: none; /* Hide topbar on smaller screens */
+    }
+}
+
+.logo {
+    text-align: center;
+    margin: 10px 0;
+}
+header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+/* Add a new class for the nav container */
+.header-content {
+    display: flex;
+    flex: 1; /* Allow it to grow and take available space */
+    justify-content: center; /* Center nav items */
+}
+
+.logo {
+    margin-right: auto; /* Pushes the nav to the center by using auto margin */
+    margin-left: 80px;
+}
+
+/* Main nav list styling */
+.nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show main nav when open */
+.nav-list.open {
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+}
+
+.nav-list li {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+/* Base styling for navbar links */
+.nav-list li a {
+    color: #000; /* Default color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Media query for desktop view */
+@media (min-width: 769px) {
+    .nav-list {
+        display: flex; /* Change display to flex for desktop */
+    }
+
+    .nav-list li a {
+        font-size: 24px; /* Increase font size for desktop */
+        font-family:Arial, sans-serif; /* Change to sans-serif */
+        text-transform: uppercase; /* Make text uppercase */
+    }
+}
+
+/* Styling for nested dropdown */
+.dropdown {
+    display: none;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding-left: 20px;
+}
+
+/* Show dropdown when open */
+.nav-list li.open .dropdown {
+    display: flex;
+}
+
+.dropdown a {
+    padding: 10px 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #000;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list.open {
+        display: block;
+    }
+}
+/* Ensure the header is a flex container and centers its content */
+.header {
+    display: flex; /* Use flexbox for header layout */
+    justify-content: center; /* Center the nav-list in the header */
+    align-items: center; /* Center items vertically in header */
+    width: 100%; /* Full width for the header */
+    padding: 10px; /* Add padding to the header */
+    background-color: white; /* Optional: background color for visibility */
+}
+
+/* Show the navigation bar as a centered horizontal bar in desktop view */
+@media (min-width: 769px) {
+    .nav-list {
+        display: flex; /* Display nav items in a row */
+        flex-direction: row; /* Horizontal layout for desktop */
+        position: static; /* Position normally in header */
+        opacity: 1; /* Make fully visible */
+        max-height: none; /* No height limit on desktop */
+        background-color: transparent; /* No background color for inline nav */
+        box-shadow: none; /* Remove shadow on desktop */
+        justify-content: center; /* Center the nav items in header */
+        align-items: center; /* Center items vertically */
+        gap: 20px; /* Space between nav items */
+        width: auto; /* Set to auto to not stretch unnecessarily */
+    }
+
+    /* Styling for nav list items */
+    .nav-list li {
+        list-style: none; /* Remove bullets */
+        margin: 0; /* Remove additional space */
+    }
+
+    .nav-list li a {
+        color: #000; /* Black text for desktop */
+        text-decoration: none; /* Remove underline */
+        font-size: 16px; /* Standard font size */
+    }
+
+    /* Hide the hamburger icon on desktop */
+    .hamburger {
+        display: none;
+    }
+}
+/* Footer Styles */
+#footer {
+    background-color: #005A9C;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content Area */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Contact Details */
+.footer-contact {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    max-width: 250px;
+    background-color: #005A9C;
+    color: white;
+    padding: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Copyright Section */
+.copyright-content {
+    background-color: #004080;
+    padding: 5px 0;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles for Columns */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Column Styles */
+.col-lg-4 {
+    padding: 5px;
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Logo Styles */
+#logo {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Widget Title Styles */
+.widget-title {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #ffcc00;
+    text-align: left;
+}
+
+/* List Styles */
+.list-icon {
+    list-style: none;
+    padding: 0;
+}
+
+.list-icon li {
+    margin-bottom: 3px;
+}
+
+/* Footer Links */
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright Text Styles */
+.copyright-text {
+    margin: 0;
+    color: #bbb;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Stack the footer content */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Remove absolute positioning from .footer-contact */
+    .footer-contact {
+        position: relative;
+        margin-top: 10px;
+        max-width: 100%; /* Full width on mobile */
+        text-align: center;
+        bottom: auto;
+        right: auto;
+    }
+
+    /* Stack .row columns vertically */
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Full-width columns on mobile */
+    .col-lg-4 {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Add padding to prevent overflow on mobile */
+    #footer {
+        padding: 20px;
+    }
+
+    /* Adjust copyright section */
+    .copyright-content {
+        height: auto;
+        padding: 10px 0;
+    }
+}
+
+
+/* Products Section */
+/* Products Section */
+.products {
+    padding: 20px;
+  }
+  .products h2 {
+    color: #007acc;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #007acc;
+  }
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Set single-column layout */
+    gap: 20px;
+  }
+  .product-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center; /* Center text and image */
+  }
+  
+  /* New CSS for vertical alignment with 5 items per line */
+  @media (min-width: 768px) {
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 items per line */
+    }
+  }
+  
+  .product-item img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+  }
+  
+  .product-item h3 {
+    color: #007acc;
+    margin-bottom: 10px;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-5px);
+    background: #FFDEAD;
+  }
