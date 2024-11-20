@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Aarha Products</title>
+    <link rel="stylesheet" href="styesss.css">
+</head>
+<body>
+  <!-- Body Inner -->
+<div class="body-inner">
+    <!-- Topbar -->
+    <div id="topbar">
+        <div class="container">
+            <div class="row text-light">
+                <div class="col-md-12 d-flex justify-content-center align-items-center">
+                    <ul class="top-menu d-flex">
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/images%20(1).jfif" width="25" height="25">
+                            <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Address: Karamsad Road, V. V. Nagar.</a></li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/phone-call-icon-design-in-blue-circle-png.webp" width="25" height="25">
+                            <a href="tel:+919033642396">Phone: +91 9033642396</a>
+                        </li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/big-blue-star---business-development-sponsorship-design-and--21.png" width="25" height="25">
+                            <a href="mailto:info@aarhaproducts.com">Mail: info@aarhaproducts.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: Topbar -->
+</div>
+
+    <header>
+        <div class="logo">
+            <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS%20(4).svg" width="264" height="150" alt="website logo">
+        </div>
+        <div class="header-content">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="products-menu">
+                    <a href="#" onclick="toggleDropdown(event)">Products</a>
+                    <div class="dropdown">
+                        <a href="cleaning.html">Cleaning Agents</a>
+                        <a href="kitchen.html">Kitchen Supplies</a>
+                        <a href="products.html">Home Care</a>
+                        <a href="medi.html">Medical Cleaning</a>
+                    </div>
+                </li>
+                <li><a href="inquiry.html">Inquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('open'); // Toggles main dropdown visibility
+        }
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const productsMenu = event.target.closest('.products-menu');
+            productsMenu.classList.toggle('open'); // Toggles nested dropdown visibility
+        }
+    </script>
+    <main>
+        <section class="products">
+            <h2>Kitchen Supplies</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Glass%20Cleaner%20(7).jpg" alt="Dishwasher">
+                    <h3>Dishwasher</h3>
+                    <p>Dish wash liquid, also known as dish soap or dish detergent, is a cleaning product specifically formulated for washing dishes, utensils, and cookware. It is used to remove grease, food residues, and stains from dishes, ensuring they are clean and ready for reuse.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/pexels-rdne-5591933.jpg" alt="Appliance cleaner (for refrigerators, microwaves)">
+                    <h3>Appliance cleaner (for refrigerators, microwaves)</h3>
+                    <p>Appliance cleaners are specially formulated products designed to effectively clean and maintain household appliances such as refrigerators, microwaves, ovens, and dishwashers. These cleaners help remove grime, grease, food residues, and stains, ensuring appliances not only look good but also function optimally.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Unti.jpg " alt="Fabric stain remover(for Kitchen Textile)">
+                    <h3>Fabric stain remover(for Kitchen Textile)</h3>
+                    <p>Fabric stain removers are specialized cleaning products designed to effectively eliminate stains from kitchen textiles, such as dish towels, aprons, tablecloths, and other fabric items. These removers help maintain the appearance and hygiene of textiles exposed to spills, food residues, and other stains.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/81S-edWxrGL._AC_UF1000,1000_QL80_.jpg" alt="Grease-cutting Cleaner">
+                    <h3>Grease-cutting Cleaner</h3>
+                    <p>This concentrated cleaner and degreaser combines a powerful blend of surfactants, detergents and butyl cleaners to quickly strip away grease, fats, oils and carbonized deposits. Its heavy-duty formula is designed for use in commercial and institutional kitchens to clean hoods, grills, walls and large kitchen equipment.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/-hiso7atm.avif" alt="RUST REMOVER">
+                    <h3>RUST REMOVER</h3>
+                    <p>RUST REMOVER is a liquid, acid based cleaning product for cleaning rust stains. It can be also used for cleaning deposits left from the caustic based cargos like caustic soda.</p>
+                 </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/istockphoto-1393560231-612x612.jpg" alt="Oven cleaners">
+                    <h3>Oven cleaners</h3>
+                    <p>Traditional oven cleaners contain sodium hydroxide, solvents, and other ingredients,They work best when used in a slightly warm (not hot) oven. If used in a self-cleaning oven, the lye can cause permanent damage to the oven.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/61S6lCR8WoL._AC_UF1000,1000_QL80_.jpg" alt="Cleaning Brushes"> 
+                    <h3>Cleaning Brushes</h3>
+                    <p>Cleaning brushes are vital components of industrial manufacturing processes that involve cleaning. Consisting of bristles connected to a handle, cleaning brushes are more useful for abrasive cleaning than other types of cleaning equipment, such as sponges.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/GettyImages-1317882716.jpg" alt="Stainless Steel Wipes">
+                    <h3>Stainless Steel Wipes</h3>
+                    <p>These non-abrasive, powerful polishing wipes are specifically formulated to remove smudges, water stains, fingerprints, food spills, grease and other residues while quickly drying to a streak free shine that lasts for days.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/Natur-Bag-and-SlimJim_updated-print-filled-bag.png" alt="Compost Bags">
+                    <h3>Compost Bags</h3>
+                    <p>They are derived generally from renewable raw materials like starch (e.g. corn, potato, tapioca etc), cellulose, soy protein, lactic acid etc., are not hazardous/toxic in production and decompose back into carbon dioxide, water, biomass etc. 100% Plastic Free & Eco-friendly.</p>
+                </div>
+                <div class="product-item">
+                    <img src="file:///C:/Users/Admin/.vscode/clean.html/71g+85c81qL._AC_UF894,1000_QL80_.jpg" alt="Sponges and Scrubbers">
+                    <h3>Sponges and Scrubbers</h3>
+                    <p>A sponge is a cleaning aid made of soft, porous material. Typically used for cleaning impervious surfaces, sponges are especially good at absorbing water and water-based solutions. Vegetable fiber sponge: wood fiber sponge combined with scouring pad. Animal fiber sponge: A Greek natural sponge.</p>
+                </div>
+        </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <link rel="stylesheet" href="foot.css">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div id="logo">
+                            <a href="ha.html">
+                                <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS.png" alt="Logo" style="max-width: 50%; height: auto;"> <!-- Responsive logo -->
+                            </a>
+                        </div>
+                        <p style="text-align: justify; color: white;">
+                            We are Gujarat's No.1 wholesale supplier of high-quality cleaning products to businesses of all sizes.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We offer a wide variety of products, including Housekeeping products.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Our range includes Disposable products for various needs.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We also provide Office Stationery products to keep your workspace organized.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Additionally, we supply Safety products to ensure a secure environment.
+                        </p>
+                    </div>
+    
+                    <!-- Placeholder for other footer content -->
+                    <div class="col-lg-4">
+                        <!-- Other content can be placed here -->
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="widget footer-contact">
+                            <div class="widget-title">Contact Details:</div>
+                            <ul class="list-icon">
+                                <li>
+                                    <i class="icon-map-pin"></i>
+                                    <strong>Address:</strong>
+                                    <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Karamsad Road, V. V. Nagar, Anand, Gujarat.</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-phone"></i>
+                                    <strong>Phone:</strong>
+                                    <a href="tel:+91 9033642396">+91 9033642396</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-mail"></i>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:info@aarhaproducts.com">info@aarhaproducts.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+           
+        </div>
+    
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">
+                    <p class="mb-0 text-light">Copyright © 
+                        <script type="text/javascript">
+                            document.write(new Date().getFullYear());
+                        </script> All Rights Reserved By Arha Products | 
+                        <a href="airbalinfotech@gmail.com" target="_blank" style="background: none;">Design By: Airbal Infotech</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
