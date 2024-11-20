@@ -1,0 +1,55 @@
+
+        nav {
+            position: relative;
+        }
+
+        .nav-list {
+            display: none; /* Hidden by default on mobile */
+            flex-direction: column;
+            width: 100%;
+            background-color: white;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            opacity: 0;
+            transform: translateY(-20px); /* Initial position for slide-down effect */
+            transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth animation */
+            z-index: 10;
+        }
+
+        .nav-list li {
+            margin: 10px;
+            position: relative; /* Needed for dropdown */
+        }
+
+        .nav-list li a {
+            font-size: large;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            z-index: 1;
+            margin-top: 5px;
+        }
+
+        .dropdown a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown a:hover {
+            background-color: gainsboro;
+        }
+
+        .nav-list li:hover .dropdown {
+            display: block; /* Show dropdown on hover */
+        }
+      
