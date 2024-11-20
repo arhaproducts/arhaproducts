@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Arha Products</title>
+    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+     <!-- Body Inner -->
+<div class="body-inner">
+    <!-- Topbar -->
+    <div id="topbar">
+        <div class="container">
+            <div class="row text-light">
+                <div class="col-md-12 d-flex justify-content-center align-items-center">
+                    <ul class="top-menu d-flex">
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/images%20(1).jfif" width="25" height="25">
+                            <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Address: Karamsad Road, V. V. Nagar.</a></li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/phone-call-icon-design-in-blue-circle-png.webp" width="25" height="25">
+                            <a href="tel:+919033642396">Phone: +91 9033642396</a>
+                        </li>
+                        <li><img src="file:///C:/Users/Admin/.vscode/clean.html/big-blue-star---business-development-sponsorship-design-and--21.png" width="25" height="25">
+                            <a href="mailto:info@aarhaproducts.com">Mail: info@aarhaproducts.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: Topbar -->
+</div>
+ 
+        <header>
+            <div class="logo">
+                <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS%20(4).svg" width="264" height="150" alt="website logo">
+            </div>
+            <div class="header-content">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="products-menu">
+                        <a href="#" onclick="toggleDropdown(event)">Products</a>
+                        <div class="dropdown">
+                            <a href="cleaning.html">Cleaning Agents</a>
+                            <a href="kitchen.html">Kitchen Supplies</a>
+                            <a href="products.html">Home Care</a>
+                            <a href="medi.html">Medical Cleaning</a>
+                        </div>
+                    </li>
+                    <li><a href="inquiry.html">Inquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            </div>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+    
+        <script>
+            function toggleMenu() {
+                const navList = document.querySelector('.nav-list');
+                navList.classList.toggle('open'); // Toggles main dropdown visibility
+            }
+    
+            function toggleDropdown(event) {
+                event.preventDefault();
+                const productsMenu = event.target.closest('.products-menu');
+                productsMenu.classList.toggle('open'); // Toggles nested dropdown visibility
+            }
+        </script>
+    <main>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us using the information below:</p>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://maps.app.goo.gl/dYrNy9iYcmon97tR6">
+                    <span>Karamsad Road, V.V. Nagar.</span>
+                    </a>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>Mobile: 9033642396</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email: info@aarhaproducts.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp: 8980431510</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <link rel="stylesheet" href="foot.css">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div id="logo">
+                            <a href="ha.html">
+                                <img src="file:///C:/Users/Admin/Downloads/aRHA%20PRODUCTS.png" alt="Logo" style="max-width: 50%; height: auto;"> <!-- Responsive logo -->
+                            </a>
+                        </div>
+                        <p style="text-align: justify; color: white;">
+                            We are Gujarat's No.1 wholesale supplier of high-quality cleaning products to businesses of all sizes.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We offer a wide variety of products, including Housekeeping products.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Our range includes Disposable products for various needs.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            We also provide Office Stationery products to keep your workspace organized.
+                        </p>
+                        <p style="text-align: justify; color: white;">
+                            Additionally, we supply Safety products to ensure a secure environment.
+                        </p>
+                    </div>
+    
+                    <!-- Placeholder for other footer content -->
+                    <div class="col-lg-4">
+                        <!-- Other content can be placed here -->
+                    </div>
+<!--                     
+                    <div class="col-lg-4">
+                        <div class="widget footer-contact">
+                            <div class="widget-title">Contact Details:</div>
+                            <ul class="list-icon">
+                                <li>
+                                    <i class="icon-map-pin"></i>
+                                    <strong>Address:</strong>
+                                    <a href="https://www.google.com/maps/place/Karamsad+Rd,+Anand,+Gujarat/@22.5459277,72.9136241,17z/data=!3m1!4b1!4m6!3m5!1s0x395e4de25af10809:0xdad76edc5e14fd69!8m2!3d22.5459277!4d72.9136241!16s%2Fg%2F1tp1x6gj?entry=ttu&g_ep=EgoyMDI0MTAyMi4wIKXMDSoASAFQAw%3D%3D">Karamsad Road, V. V. Nagar, Anand, Gujarat.</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-phone"></i>
+                                    <strong>Phone:</strong>
+                                    <a href="tel:+91 9033642396">+91 9033642396</a>
+                                </li>
+                                <br></br>
+                                <li>
+                                    <i class="icon-mail"></i>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:info@aarhaproducts.com">info@aarhaproducts.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+    
+           
+        </div>
+    
+        <div class="copyright-content">
+            <div class="container">
+                <div class="copyright-text text-center">
+                    <p class="mb-0 text-light">Copyright © 
+                        <script type="text/javascript">
+                            document.write(new Date().getFullYear());
+                        </script> All Rights Reserved By Arha Products | 
+                        <a href="airbalinfotech@gmail.com" target="_blank" style="background: none;">Design By: Airbal Infotech</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
